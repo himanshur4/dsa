@@ -43,31 +43,3 @@ public:
         }
     }
 };
-
-int main() {
-    // Example Usage
-    DSU ds(7);
-    
-    ds.unionByRank(1, 4);
-    ds.unionByRank(2, 5);
-    ds.unionByRank(3, 2);
-    
-    if (ds.isConnected(3, 5)) {
-        cout << "3 and 5 are connected." << endl;
-    } else {
-        cout << "3 and 5 are NOT connected." << endl;
-    }
-
-    ds.unionByRank(1, 7);
-    ds.unionByRank(0, 5);
-    ds.unionByRank(5, 6);
-    ds.unionByRank(4, 6);
-    
-    if (ds.isConnected(3, 7)) {
-        cout << "3 and 7 are connected." << endl;
-    } else {
-        cout << "3 and 7 are NOT connected." << endl;
-    }
-
-    return 0;
-}
